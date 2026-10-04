@@ -40,7 +40,7 @@
     <PackageIcon>VpnHood.png</PackageIcon>
     <PackageProjectUrl>https://github.com/vpnhood/VpnHood.Net.IpLocations.Assets.Ip2LocationLite</PackageProjectUrl>
     <RepositoryUrl>https://github.com/vpnhood/VpnHood.Net.IpLocations.Assets.Ip2LocationLite</RepositoryUrl>
-    <Version>8.2.854</Version>
+    <Version>8.2.855</Version>
     <PackageTags>IP Geolocation, IP2Location, VPN, Country Detection</PackageTags>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
