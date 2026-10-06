@@ -33,11 +33,14 @@
 	     once per ABI. A package's assets are entries of the .apk rather than files, so a reader opens
 	     the asset through AssetManager and copies it, which is what README.md shows.
 
-	     The folder's name twice on purpose: .NET for Android takes a leading assets\ in the link as
-	     the package's asset root and drops it, and the folder must keep its name under that root, so
-	     the asset is "iplocations/IpLocations.zip" - the path the app asks for. -->
+	     The link starts with the project's own assets folder, which .NET for Android takes as the
+	     package's asset root and drops - Assets in an Android project, Platforms\Android\Assets in a
+	     MAUI one - and the folder keeps its name under that root, so the asset is
+	     "iplocations/IpLocations.zip" - the path the app asks for. The folder is read in the item,
+	     not in a property above: the SDK or MAUI may set it after this file, and items are evaluated
+	     after every property. -->
 	<ItemGroup Condition="'$(VhIpLocationsIsAndroidApp)' == 'true'">
-		<AndroidAsset Include="$(VhIpLocationsDir)IpLocations.zip" Link="assets\iplocations\IpLocations.zip" Visible="false" />
+		<AndroidAsset Include="$(VhIpLocationsDir)IpLocations.zip" Link="$(MonoAndroidAssetsPrefix)\iplocations\IpLocations.zip" Visible="false" />
 	</ItemGroup>
 
 	<!-- iOS, tvOS and Mac Catalyst: a folder of the app bundle, read in place. -->
