@@ -1,4 +1,4 @@
-# VpnHood.Assets.IpLocations
+# VpnHood.Net.IpLocations.Assets.Ip2LocationLite
 
 The **IP2Location LITE** country database as an **inert asset package**: data plus MSBuild targets,
 and **no compiled code**. Nothing in your codebase can take a reference on it — it is a store of
