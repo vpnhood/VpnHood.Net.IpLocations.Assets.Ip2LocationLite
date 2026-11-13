@@ -77,8 +77,12 @@ offset. Weigh that before choosing it over a copy.
 ## What is in the zip
 
 One entry per country, named by its lower-case ISO code (`tr.ips`), holding that country's IP
-ranges already sorted and unified, plus `_checksum.txt` naming the build of the data. Every entry
-is stored uncompressed.
+ranges already sorted and unified. Every entry is stored uncompressed.
+
+In front of the zip, its first 25 bytes, is a stamp naming the build of the data: `VHSTAMP:`, 16
+hex digits and a newline. The zip's offsets count it, so a reader that finds the directory from the
+end, as `ZipArchive` does, opens the file as it is; one that reads from the start, as Java's
+`ZipInputStream` does, finds no entry.
 
 ## Licensing — read this before you ship
 

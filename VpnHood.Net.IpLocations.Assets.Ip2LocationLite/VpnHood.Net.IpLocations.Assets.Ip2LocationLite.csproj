@@ -7,7 +7,7 @@
 
        What it carries:
          buildTransitive/IpLocations.zip      the database: one stored entry per country ({code}.ips),
-                                              plus _checksum.txt naming the build
+                                              behind a stamp naming the build (VHSTAMP:, README.md)
          buildTransitive/<PackageId>.targets  places both where the consuming app's platform reads
                                               files, at any reference depth, a direct one included;
                                               no build/ copy, which only NuGet before 5.0 would read
